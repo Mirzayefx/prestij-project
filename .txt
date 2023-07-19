@@ -1,0 +1,198 @@
+import React, { useEffect, useRef, useState } from 'react'
+import { Keyboard, Pagination, Navigation, Controller } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+//
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import TeacherImg from '../images/muellim.jpeg'
+import TeacherImg1 from '../images/8_thumb.jpeg'
+import TeacherImg2 from '../images/9_thumb.jpeg'
+import TeacherImg3 from '../images/5_thumb.jpeg'
+import { BsLink45Deg } from "react-icons/bs";
+
+
+
+const TeachersContainer = () => {
+    const swiperNewsRef = useRef(null);
+    const swiperInfoRef = useRef(null);
+    const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (swiperNewsRef.current && swiperNewsRef.current.swiper) {
+                swiperNewsRef.current.swiper.slideNext();
+            }
+        }, 4000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    useEffect(() => {
+        if (
+            swiperNewsRef.current &&
+            swiperNewsRef.current.swiper &&
+            swiperInfoRef.current &&
+            swiperInfoRef.current.swiper
+        ) {
+            swiperNewsRef.current.swiper.controller.control = swiperInfoRef.current.swiper;
+            swiperInfoRef.current.swiper.controller.control = swiperNewsRef.current.swiper;
+        }
+    }, []);
+
+
+    // console.log(swiperInfoRef.current.swiper.controller.control);
+
+    const handleSlideChange = (swiper) => {
+        console.log(swiper.realIndex);
+        setActiveSlideIndex(swiper.activeIndex);
+    };
+
+    const handleSlideClick = (index) => {
+        if (swiperNewsRef.current && swiperNewsRef.current.swiper) {
+            swiperNewsRef.current.swiper.slideTo(index);
+            setActiveSlideIndex(index);
+        }
+    };
+
+    const teacherData = [
+        {
+            name: 'Rasim Rəhimov',
+            subject: 'Coğrafiya',
+            description: 'Abituriyent şöbəsinin rəhbəri.',
+            image: TeacherImg,
+        },
+        {
+            name: 'Rasim Rəhimov1',
+            subject: 'Coğrafiya',
+            description: 'Abituriyent şöbəsinin rəhbəri.',
+            image: TeacherImg1,
+        },
+        {
+            name: 'Rasim Rəhimov2',
+            subject: 'Coğrafiya',
+            description: 'Abituriyent şöbəsinin rəhbəri.',
+            image: TeacherImg2,
+        },
+        {
+            name: 'Rasim Rəhimov3',
+            subject: 'Coğrafiya',
+            description: 'Abituriyent şöbəsinin rəhbəri.',
+            image: TeacherImg3,
+        },
+        {
+            name: 'Rasim Rəhimov',
+            subject: 'Coğrafiya',
+            description: 'Abituriyent şöbəsinin rəhbəri.',
+            image: TeacherImg,
+        },
+        {
+            name: 'Rasim Rəhimov1',
+            subject: 'Coğrafiya',
+            description: 'Abituriyent şöbəsinin rəhbəri.',
+            image: TeacherImg1,
+        },
+        {
+            name: 'Rasim Rəhimov2',
+            subject: 'Coğrafiya',
+            description: 'Abituriyent şöbəsinin rəhbəri.',
+            image: TeacherImg2,
+        },
+        {
+            name: 'Rasim Rəhimov3',
+            subject: 'Coğrafiya',
+            description: 'Abituriyent şöbəsinin rəhbəri.',
+            image: TeacherImg3,
+        },
+        // Add more teacher data objects...
+    ];
+
+    return (
+        <div className='news_container container'>
+            <Swiper
+
+                slidesPerView={3}
+                spaceBetween={30}
+                loop={true}
+                keyboard={{
+                    enabled: true,
+                }}
+                centeredSlides
+                grabCursor
+                autoplay={{
+                    delay: 3000
+                }}
+
+                modules={[Keyboard, Navigation, Controller]}
+                className="mySwiper teachers_img_pagination"
+                slideActiveClass="active_slide"
+                ref={swiperNewsRef}
+                onSlideChange={handleSlideChange}
+
+
+
+            >
+                {teacherData.map((teacher, index) => (
+                    <SwiperSlide
+                        key={index}
+                        className={`teachers_slider_paginations_card ${activeSlideIndex === index ? 'active_slide' : ''
+                            }`}
+                        onClick={() => handleSlideClick(index + 1)}
+                    >
+                        <img src={teacher.image} />
+                    </SwiperSlide>
+                ))}
+
+
+            </Swiper>
+            <Swiper
+
+                ref={swiperInfoRef}
+                slidesPerView={1}
+                spaceBetween={30}
+                loop={true}
+                keyboard={{
+                    enabled: true,
+                }}
+                grabCursor
+                autoplay={{
+                    delay: 3000
+                }}
+                modules={[Keyboard, Navigation, Controller]}
+                className="mySwiper teachers_slider_card_container"
+            // onSlideChange={handleSlideChange}
+            initialSlide={activeSlideIndex}
+            >
+                {
+                    teacherData.map((teacher, i) => {
+                        return (
+                            <SwiperSlide key={i} className='teachers_slider_card'>
+
+                                <h3>{teacher.name}</h3>
+                                <span>{teacher.subject}</span>
+                                <p>{teacher.description}</p>
+                            </SwiperSlide>
+                        )
+                    })
+                }
+
+
+               
+
+
+            </Swiper>
+
+
+        </div>
+    )
+}
+
+export default TeachersContainer
+
+
+
+
+
+
+
+rm -rf .git
