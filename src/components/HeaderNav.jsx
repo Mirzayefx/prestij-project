@@ -5,7 +5,7 @@ import { AiOutlineSearch } from "react-icons/ai"
 const HeaderNav = () => {
     return (
         <div className='header_nav_bg'>
-            <nav className='container'>
+            {/* <nav className='container'>
                 <ul className="nav_list">
                     <li>
                         <Link to=''>Haqqımızda</Link>
@@ -49,7 +49,7 @@ const HeaderNav = () => {
 
                 </ul>
 
-            </nav>
+            </nav> */}
         </div>
     )
 }

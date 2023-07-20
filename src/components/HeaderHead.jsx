@@ -22,10 +22,10 @@ const HeaderHead = () => {
                         <ImMobile />
                         <Link to={''}>(055) 681-96-61</Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <PiPhoneLight />
                         <Link to={''}>(012) 409-02-74</Link>
-                    </li>
+                    </li> */}
                 </ul>
                 <ul className='header_second_list'>
                     <li>

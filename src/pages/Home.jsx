@@ -14,15 +14,17 @@ import FooterHeader from '../components/FooterHeader'
 import FooterSecond from '../components/FooterSecond'
 import FooterEndBg from '../components/FooterEndBg'
 import NewLetter from '../components/NewLetter'
+import HeaderMainContainer from '../components/HeaderMainContainer'
 
 const Home = () => {
   return (
     <div>
       <header>
         <HeaderHead />
-        <HeaderSecond />
-        <HeaderNav />
-        <HeaderSlider />
+        {/* <HeaderSecond /> */}
+        {/* <HeaderNav /> */}
+        {/* <HeaderSlider /> */}
+        <HeaderMainContainer/>
       </header>
       <main>
         

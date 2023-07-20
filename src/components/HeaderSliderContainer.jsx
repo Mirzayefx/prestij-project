@@ -12,6 +12,8 @@ import HeaderFiveImg from '../images/headerFiveImg.jpeg'
 import { Bounce, Rotate, Zoom } from 'react-awesome-reveal';
 
 import 'swiper/css/effect-fade';
+import HeaderSecond from './HeaderSecond';
+import HeaderSecondCards from './HeaderSecondCards';
 
 
 
@@ -32,7 +34,7 @@ const HeaderSliderContainer = () => {
     }, []);
 
 
-    
+
 
 
 
@@ -74,14 +76,20 @@ const HeaderSliderContainer = () => {
                 }} className='header_slider_card'>
                     {/* <img src={} alt="" /> */}
                     <div className="header_slider_bg_shadow">
-                        <div className='header_middle_container_content container'>
+                        <div className="header_main_flex_container container">
+                            <HeaderSecond />
+                            <div className='header_middle_container_content'>
 
-                            <h1>İmtahan nəticələri üçün daxil olun</h1>
+                                <h1 className='rotateInDownLeft'>
+                                    İmtahan nəticələri üçün daxil olun</h1>
 
-                            <button><span>Read More</span></button>
+                                <button><span>Read More</span></button>
 
 
+                            </div>
+                            <HeaderSecondCards />
                         </div>
+
 
                     </div>
 
@@ -93,9 +101,17 @@ const HeaderSliderContainer = () => {
                     backgroundPosition: 'center'
                 }} className='header_slider_card'>
                     <div className="header_slider_bg_shadow">
-                        <div className='header_middle_container_content container'>
-                            <h1>İmtahan nəticələri üçün daxil olun</h1>
-                            <button><span>Read More</span></button>
+                        <div className="header_main_flex_container container">
+                            <HeaderSecond />
+                            <div className='header_middle_container_content'>
+
+                                <h1>İmtahan nəticələri üçün daxil olun</h1>
+
+                                <button><span>Read More</span></button>
+
+
+                            </div>
+                            <HeaderSecondCards />
                         </div>
 
                     </div>
@@ -107,11 +123,18 @@ const HeaderSliderContainer = () => {
                     backgroundPosition: 'center'
                 }} className='header_slider_card'>
                     <div className="header_slider_bg_shadow">
-                        <div className='header_middle_container_content container'>
-                            <h1>İmtahan nəticələri üçün daxil olun</h1>
-                            <button><span>Read More</span></button>
-                        </div>
+                        <div className="header_main_flex_container container">
+                            <HeaderSecond />
+                            <div className='header_middle_container_content'>
 
+                                <h1>İmtahan nəticələri üçün daxil olun</h1>
+
+                                <button><span>Read More</span></button>
+
+
+                            </div>
+                            <HeaderSecondCards />
+                        </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide style={{
@@ -121,11 +144,18 @@ const HeaderSliderContainer = () => {
                     backgroundPosition: 'center'
                 }} className='header_slider_card'>
                     <div className="header_slider_bg_shadow">
-                        <div className='header_middle_container_content container'>
-                            <h1>İmtahan nəticələri üçün daxil olun</h1>
-                            <button><span>Read More</span></button>
-                        </div>
+                        <div className="header_main_flex_container container">
+                            <HeaderSecond />
+                            <div className='header_middle_container_content'>
 
+                                <h1>İmtahan nəticələri üçün daxil olun</h1>
+
+                                <button><span>Read More</span></button>
+
+
+                            </div>
+                            <HeaderSecondCards />
+                        </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide style={{
@@ -135,11 +165,18 @@ const HeaderSliderContainer = () => {
                     backgroundPosition: 'center'
                 }} className='header_slider_card'>
                     <div className="header_slider_bg_shadow">
-                        <div className='header_middle_container_content container'>
-                            <h1>İmtahan nəticələri üçün daxil olun</h1>
-                            <button><span>Read More</span></button>
-                        </div>
+                        <div className="header_main_flex_container container">
+                            <HeaderSecond />
+                            <div className='header_middle_container_content '>
 
+                                <h1>İmtahan nəticələri üçün daxil olun</h1>
+
+                                <button><span>Read More</span></button>
+
+
+                            </div>
+                            <HeaderSecondCards />
+                        </div>
                     </div>
                 </SwiperSlide>
 
