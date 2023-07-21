@@ -15,11 +15,12 @@ import FooterSecond from '../components/FooterSecond'
 import FooterEndBg from '../components/FooterEndBg'
 import NewLetter from '../components/NewLetter'
 import HeaderMainContainer from '../components/HeaderMainContainer'
+import Footer from '../components/Footer'
 
 const Home = () => {
   return (
     <div>
-      <header>
+      <header className='home_header'>
         <HeaderHead />
         {/* <HeaderSecond /> */}
         {/* <HeaderNav /> */}
@@ -59,11 +60,7 @@ const Home = () => {
           <NewLetter/>
         </section>
       </main>
-      <footer>
-          <FooterHeader/>
-          <FooterSecond/>
-          <FooterEndBg/>
-      </footer>
+      <Footer/>
     </div>
   )
 }

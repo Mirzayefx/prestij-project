@@ -8,10 +8,10 @@ const Nav = () => {
         <nav>
             <ul className="nav_list">
                 <li className='nav_inner_list'>
-                    <Link to=''>Haqqımızda</Link>
+                    <Link to='/haqqimizda'>Haqqımızda</Link>
                 </li>
                 <li className='nav_inner_list'>
-                    <Link to=''>Uğurlarımız</Link>
+                    <Link to='/ugurlarimiz'>Uğurlarımız</Link>
                 </li>
                 <li className='nav_inner_list'>
                     <Link to=''>XİDMƏTLƏRİMİZ</Link>
