@@ -13,6 +13,7 @@
     --yellow: #EAAE0D;
     --blue: #41A2F7;
     --serviceIconBg: #042762;
+    --whatsapp: #25d366;
 }
 
 * {
@@ -1515,8 +1516,8 @@ nav{
 }
 .fixed_social div{
      background-image: conic-gradient(var(--white) 25%, var(--white) 0 45%, #dadee2 0 45%, #e8ebed 0 55%, #f6f7f8 0 65%, #fff 0 75%, var(--white2) 25%);;
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1526,15 +1527,19 @@ nav{
 
 .fixed_social div:nth-child(1) .fixed_social_icon{
     color: var(--facebook);
-    font-size: 2.8rem;
+    font-size: 2.5rem;
 }
 .fixed_social div:nth-child(2) .fixed_social_icon{
     color: var(--intagram);
-    font-size: 2.8rem;
+    font-size: 2.5rem;
 }
 .fixed_social div:nth-child(3) .fixed_social_icon{
     color: var(--youtube);
-    font-size: 2.8rem;
+    font-size: 2.5rem;
+}
+.fixed_social div:nth-child(4) .fixed_social_icon{
+    color: var(--whatsapp);
+    font-size: 2.5rem;
 }
 
 
