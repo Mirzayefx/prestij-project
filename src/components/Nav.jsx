@@ -14,7 +14,7 @@ const Nav = () => {
                     <Link to='/ugurlarimiz'>Uğurlarımız</Link>
                 </li>
                 <li className='nav_inner_list'>
-                    <Link to=''>XİDMƏTLƏRİMİZ</Link>
+                    <Link to='/xidmetlerimiz'>XİDMƏTLƏRİMİZ</Link>
                     <ul>
                         <li>
                             <Link to=''>ABİTURİYENT HAZIRLIĞI</Link>
@@ -52,16 +52,16 @@ const Nav = () => {
                     </ul>
                 </li>
                 <li className='nav_inner_list'>
-                    <Link to=''>Xəbərlər</Link>
+                    <Link to='/xeberler'>Xəbərlər</Link>
                 </li>
                 <li className='nav_inner_list galarey_list'>
-                    <Link to=''>Qalareya</Link>
+                    <Link to='/foto'>Qalareya</Link>
                     <ul>
                         <li>
-                            <Link to=''>FOTO</Link>
+                            <Link to='/foto'>FOTO</Link>
                         </li>
                         <li>
-                            <Link to=''>VİDEO</Link>
+                            <Link to='/video'>VİDEO</Link>
                         </li>
                     </ul>
                 </li>
@@ -73,10 +73,10 @@ const Nav = () => {
                 </li>
 
                 <li className='nav_inner_list'>
-                    <Link to=''>NƏŞRLƏRİMİZ</Link>
+                    <Link to='/nesrlerimiz'>NƏŞRLƏRİMİZ</Link>
                 </li>
                 <li className='nav_inner_list'>
-                    <Link to=''>Əlaqə</Link>
+                    <Link to='/elaqe'>Əlaqə</Link>
                 </li>
                 <button className='nav_search_btn'>
                     <AiOutlineSearch className='search_icon' />

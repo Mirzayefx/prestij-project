@@ -5,8 +5,7 @@ import LatestNews from './LatestNews'
 const OtherAboutContainer = () => {
   return (
     <div className='other_about_container container'>
-        <OtherAboutContent/>
-        <LatestNews/>
+        
     </div>
   )
 }
