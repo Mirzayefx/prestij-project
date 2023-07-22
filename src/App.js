@@ -9,6 +9,7 @@ import FotoPage from './pages/FotoPage';
 import VideoPage from './pages/VideoPage';
 import PublicationPage from './pages/PublicationPage';
 import ContactPage from './pages/ContactPage';
+import CVSendPage from './pages/CVSendPage';
 const App = () => {
   return (
     <BrowserRouter>
@@ -22,6 +23,7 @@ const App = () => {
         <Route path='/video' element={<VideoPage />} />
         <Route path='/nesrlerimiz' element={<PublicationPage />} />
         <Route path='/elaqe' element={<ContactPage />} />
+        <Route path='/cv-gonder' element={<CVSendPage />} />
       </Routes>
     </BrowserRouter>
   )

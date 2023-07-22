@@ -1765,7 +1765,8 @@ nav {
 }
 .other_news_container,
 .other_foto_container,
-.other_video_container{
+.other_video_container,
+.other_cv_send_container{
     margin-top: 60px;
     margin-bottom: 120px;
 }
@@ -1829,7 +1830,8 @@ nav {
 }
 
 
-.other_contact_form button {
+.other_contact_form button,
+.other_cv_send_form_container button {
     /* margin-top: 50px; */
     font-size: 1.6rem;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -1845,7 +1847,8 @@ nav {
     background-color: var(--white);
 }
 
-.other_contact_form button:before {
+.other_contact_form button:before,
+.other_cv_send_form_container button::before {
     transform: translate(-110%, -110%) translateZ(0);
     content: "";
     display: block;
@@ -1858,11 +1861,13 @@ nav {
     color: var(--white);
 }
 
-.other_contact_form button:hover:before {
+.other_contact_form button:hover:before,
+.other_cv_send_form_container button:hover:before {
     transform: translate(-45%, -34%) translateZ(0);
 }
 
-.other_contact_form button:hover span {
+.other_contact_form button:hover span,
+.other_cv_send_form_container button:hover span {
     color: var(--white);
     position: relative;
     top: 0;
@@ -1902,5 +1907,53 @@ nav {
 }
 .other_contact_content p{
     font-size: 1.4rem;
+    line-height: 20px;
+}
+
+
+.other_cv_send_form_input_card input,
+.other_cv_send_form_input_container textarea{
+    width: 100%;
+    background: none;
+    border: 1px solid var(--gray);
+    padding: 14px;
+    outline: none;
+    font-family: 'Mulish', sans-serif;
+    display: block;
+    color: var(--black4);
+}
+.other_cv_send_form_input_card{
+    margin-bottom: 20px;
+    width: 100%;
+}
+.other_cv_send_form_input_container{
+    display: flex;
+    gap: 35px;
+}
+.other_cv_send_form_card h3{
+    margin-bottom: 15px;
+    margin-top: 40px;
+    color: var(--black4);
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+.other_cv_send_form_input_diff_container .other_cv_send_form_input_container:not(:last-child){
+    border-bottom: 1px solid var(--gray);
+    
+}
+.other_cv_send_form_input_diff_container .other_cv_send_form_input_container:not(:first-child){
+    margin-top: 20px;
+}
+.other_cv_send_form_input_container textarea{
+    width: 100%;
+    resize: none;
+}
+
+.other_cv_send_container h4{
+    color: var(--black4);
+}
+.other_cv_send_form_card p{
+    color: var(--black3);
+    font-size: 1.5rem;
     line-height: 20px;
 }

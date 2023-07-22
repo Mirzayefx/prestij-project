@@ -2,6 +2,7 @@ import React from 'react'
 import OtherHeader from '../components/OtherHeader'
 import Footer from '../components/Footer'
 import OtherAboutContainer from '../components/OtherAboutContainer'
+import OtherPublicationContainer from '../components/OtherPublicationContainer'
 
 const PublicationPage = () => {
     return (
@@ -9,7 +10,7 @@ const PublicationPage = () => {
             <OtherHeader otherHeaderMainContent="Nəşrlərimiz" otherHeaderPagesLink="NƏŞRLƏRİMİZ" />
             <main>
                 <section>
-                    <OtherAboutContainer />
+                    <OtherPublicationContainer />
                 </section>
             </main>
             <Footer />

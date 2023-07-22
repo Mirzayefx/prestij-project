@@ -66,7 +66,7 @@ const Nav = () => {
                     </ul>
                 </li>
                 <li className='nav_inner_list'>
-                    <Link to=''>Cv göndər</Link>
+                    <Link to='/cv-gonder'>Cv göndər</Link>
                 </li>
                 <li className='nav_inner_list'>
                     <Link to=''>İmtahanlar</Link>
