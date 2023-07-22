@@ -78,7 +78,11 @@ const Nav = () => {
                 <li className='nav_inner_list'>
                     <Link to='/elaqe'>Əlaqə</Link>
                 </li>
-                <button className='nav_search_btn'>
+                
+
+
+            </ul>
+            <button className='nav_search_btn'>
                     <AiOutlineSearch className='search_icon' />
                     <div className="header_search_container">
                         <input placeholder='Axtarış sözünü bura daxil edin' type="text" />
@@ -88,9 +92,6 @@ const Nav = () => {
 
                     </div>
                 </button>
-
-
-            </ul>
 
         </nav>
     )

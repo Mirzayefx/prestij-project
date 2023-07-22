@@ -1,0 +1,45 @@
+@media screen and (max-width: 1180px){
+    .container{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1150px){
+    .nav_list{
+        gap: 12px;
+    }
+    .nav_list li a {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 1050px){
+    .logo{
+        width: 100px;
+    }
+    .nav_list li a {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .logo{
+        width: 120px;
+    }
+   nav{
+    
+   }
+    .nav_list{
+        position: fixed;
+        flex-direction: column;
+        left: 0;
+        top: 0;
+        background-color: red;
+        height: 100vh;
+        z-index: 999999999 !important;
+    }
+    .nav_list li a{
+        color: var(--black);
+    }
+}
