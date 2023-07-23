@@ -30,16 +30,27 @@
    nav{
     
    }
+   
     .nav_list{
         position: fixed;
         flex-direction: column;
         left: 0;
-        top: 0;
-        background-color: red;
-        height: 100vh;
-        z-index: 999999999 !important;
+        top: 0px !important;
+        background-color: var(--white);
+        /* height: 100vh; */
+        gap: 10px;
+        z-index: 99 !important;
+        width: 300px;
+        overflow: auto !important;
+        
     }
     .nav_list li a{
         color: var(--black);
+       
+    }
+    .nav_list li{
+        /* background-color: lime; */
+        padding: 0px !important;
+        height: auto;
     }
 }

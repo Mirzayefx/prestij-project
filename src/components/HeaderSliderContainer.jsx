@@ -115,7 +115,7 @@ const HeaderSliderContainer = () => {
                                 {/* <img src={} alt="" /> */}
                                 <div className="header_slider_bg_shadow">
                                     <div className="header_main_flex_container container">
-                                        <HeaderSecond />
+                                       
                                         <div className='header_middle_container_content'>
 
                                             <h1 className='haeder_one'>
@@ -136,7 +136,7 @@ const HeaderSliderContainer = () => {
 
 
                                         </div>
-                                        <HeaderSecondCards />
+                                        
                                     </div>
 
 

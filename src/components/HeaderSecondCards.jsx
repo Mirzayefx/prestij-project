@@ -10,7 +10,7 @@ import OnlineServiceIcon from '../images/technical-support (1).png'
 
 const HeaderSecondCards = () => {
     return (
-        <ul className='header_second_cards_container'>
+        <ul className='header_second_cards_container container'>
             <li className="header_second_card">
                 <div>
                     <img src={OnlineExamResultIcon} alt="" />
