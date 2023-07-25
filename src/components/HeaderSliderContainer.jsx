@@ -16,12 +16,29 @@ import HeaderSecond from './HeaderSecond';
 import HeaderSecondCards from './HeaderSecondCards';
 import { gsap } from 'gsap';
 import { Zoom } from 'react-awesome-reveal';
+import { useDispatch, useSelector } from 'react-redux';
+import { getBannerList } from '../actions/MainAction';
+import { Link } from 'react-router-dom';
 
 
 
 const HeaderSliderContainer = () => {
     const swiperRef = useRef(null);
     const [activeIndex, setActiveIndex] = useState(0);
+
+    const dispatch=useDispatch();
+    const bannerListArr=useSelector(state=>state.Data.bannerListArr)
+    const isHeaderLoading=useSelector(state=>state.Data.isHeaderLoading)
+    console.log(bannerListArr);
+    useEffect(()=>{
+        dispatch(getBannerList())
+    },[dispatch])
+
+    // useEffect(()=>{
+    //     if(bannerListArr.length>0){
+    //         swiperRef.current?.update()
+    //     }
+    // },[])
 
 
     let headerArr = [
@@ -53,23 +70,51 @@ const HeaderSliderContainer = () => {
     ]
 
 
-    useEffect(() => {
+    // useEffect(() => {
+    //     let spanEl=document.querySelectorAll('.haeder_one span')
+    //     let headEl=document.querySelectorAll('.haeder_one')
 
+    //     // console.log(spanEl);
+    //     // console.log(spanEl[0]);
+
+
+
+    //     const interval = setInterval(() => {
+    //         if (swiperRef.current && swiperRef.current.swiper) {
+    //             setActiveIndex((prevIndex) => (prevIndex + 1) % headerArr.length);
+    //             swiperRef.current.swiper.slideNext();
+
+    //         }
+    //         for(let i=0;i<spanEl.length;i++){
+    //             // console.log(spanEl[i]);
+    //             // spanEl[i].classList.add('activeSpan')
+
+    //         }
+    //         for(let i=0;i<headEl.length;i++){
+    //             // console.log(spanEl[i]);
+    //             headEl[i].classList.add('headActive')
+    //         }
+
+    //     }, 3000);
+
+    //     return () => clearInterval(interval);
+    // }, []);
+
+
+
+
+    useEffect(() => {
+       
         const interval = setInterval(() => {
             if (swiperRef.current && swiperRef.current.swiper) {
-                setActiveIndex((prevIndex) => (prevIndex + 1) % headerArr.length);
+                setActiveIndex((prevIndex) => (prevIndex + 1) % bannerListArr?.length);
                 swiperRef.current.swiper.slideNext();
-
+                
             }
-        }, 12000);
+        }, 3000);
 
         return () => clearInterval(interval);
-    }, []);
-
-
-
-
-    
+    }, [activeIndex]);
 
 
 
@@ -78,7 +123,9 @@ const HeaderSliderContainer = () => {
 
     return (
         <div className='header_slider_container'>
-            <Swiper
+            {
+                bannerListArr.length>0?
+                <Swiper
                 ref={swiperRef}
                 slidesPerView={1}
                 spaceBetween={0}
@@ -89,6 +136,11 @@ const HeaderSliderContainer = () => {
                 grabCursor
                 autoplay={true}
                 effect='fade'
+                // touchRatio={1.5}
+                // speed={500}
+               
+                
+                
                 // pagination={{
                 //     clickable: false,
                 // }}
@@ -103,11 +155,13 @@ const HeaderSliderContainer = () => {
                 modules={[Keyboard, Pagination, Navigation, EffectFade]}
                 className="mySwiper header_slider_cards_container"
             >
+               
                 {
-                    headerArr.map((data, i) => {
+                    // isHeaderLoading? ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus debitis sed architecto molestiae optio. Cupiditate, fuga quaerat voluptatibus consectetur iste nulla ratione ab voluptates maiores voluptate, dolores, eius molestias minus.':
+                    bannerListArr?.map((data, i) => {
                         return (
-                            <SwiperSlide style={{
-                                background: `url(${data.img})`,
+                            <SwiperSlide key={i} style={{
+                                background: `url(${data?.image})`,
                                 backgroundRepeat: 'no-repeat',
                                 backgroundSize: 'cover',
                                 backgroundPosition: 'center'
@@ -115,28 +169,32 @@ const HeaderSliderContainer = () => {
                                 {/* <img src={} alt="" /> */}
                                 <div className="header_slider_bg_shadow">
                                     <div className="header_main_flex_container container">
-                                       
+
                                         <div className='header_middle_container_content'>
 
                                             <h1 className='haeder_one'>
                                                 {/* {data.headerOne.split('').map((letter, index) => {
                                                     return ( */}
-                                                    {
-                                                        Array.from(data.headerOne).map((z,i)=>{
-                                                            {console.log(i);}
-                                                            return (
-                                                                <span>{z}</span>
-                                                            )
-                                                        })
-                                                    }
-                                                        
+                                                {
+
+                                                    Array.from(data?.title).map((z, i) => {
+                                                        // {console.log(z);}
+                                                        return (
+                                                            <span>{z}</span>
+                                                        )
+                                                    })
+                                                }
+
                                             </h1>
 
-                                            <button><span>Read More</span></button>
+                                            <Link to={data?.link}>
+                                                <button><span>Read More</span></button>
+                                            </Link>
+                                            
 
 
                                         </div>
-                                        
+
                                     </div>
 
 
@@ -237,7 +295,9 @@ const HeaderSliderContainer = () => {
 
 
 
-            </Swiper>
+            </Swiper>: ''
+            }
+           
         </div>
     )
 }

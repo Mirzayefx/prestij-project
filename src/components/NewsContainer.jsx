@@ -14,9 +14,21 @@ import TestImg5 from '../images/firstImg2.jpeg'
 import TestImg6 from '../images/headerFiveImg.jpeg'
 import { BsLink45Deg } from "react-icons/bs";
 import { LiaCalendarSolid } from "react-icons/lia"
+import { useDispatch, useSelector } from 'react-redux';
+import { getNewsList } from '../actions/MainAction';
+import DOMPurify from 'dompurify';
+import { Link } from 'react-router-dom';
 
 const NewsContainer = () => {
     const swiperNewsRef = useRef(null);
+
+    const dispatch = useDispatch()
+    const newsListArr = useSelector(state => state.Data.newsListArr)
+    useEffect(() => {
+        dispatch(getNewsList())
+    }, [dispatch])
+
+    console.log(newsListArr);
     useEffect(() => {
         const interval = setInterval(() => {
             if (swiperNewsRef.current && swiperNewsRef.current.swiper) {
@@ -58,137 +70,32 @@ const NewsContainer = () => {
             >
 
 
+                {
+                    newsListArr.map((data, i) => {
+                        return (
 
-                <SwiperSlide className='news_slider_card'>
-
-                    <img src={TestImg} alt="" />
-                    {/* <div className="news_slider_card_link_bg_shadow">
-                            <BsLink45Deg className="news_slider_card_link" />
-                        </div> */}
-                    <h3 className='new_slider_card_content_header'>Abituriyentlər üçün psixoloji seminar</h3>
-                    <div className="new_slider_card_content">
-                        <h3>Abituriyentlər üçün psixoloji seminar</h3>
-                        <p>Məntiq Olimpiadasının qalibləri məlum oldu.</p>
-                        <div className='news_slider_card_end'>
-                            <LiaCalendarSolid className='calendar' />
-                            <span>06.11.2018</span>
-                        </div>
-                    </div>
+                            <SwiperSlide className='news_slider_card'>
+                                <Link key={i} to={`/xeberler/${data.title}/${data.id}`}>
+                                    <img src={data.image} alt="" />
 
 
-                    {/* <p>Məntiq Olimpiadasının qalibləri məlum oldu.</p>
-                    <div className='news_slider_card_end'>
-                        <LiaCalendarSolid />
-                        <span>06.11.2018</span>
-                    </div> */}
-                </SwiperSlide>
-                <SwiperSlide className='news_slider_card'>
-                    {/* <div className='news_slider_card_img'> */}
-                    <img src={TestImg1} alt="" />
-                    {/* <div className="news_slider_card_link_bg_shadow">
-                            <BsLink45Deg className="news_slider_card_link" />
-                        </div> */}
-                    {/* </div> */}
-                    <h3 className='new_slider_card_content_header'>Abituriyentlər üçün psixoloji seminar</h3>
-                    <div className="new_slider_card_content">
-                        <h3>Abituriyentlər üçün psixoloji seminar</h3>
-                        <p>Məntiq Olimpiadasının qalibləri məlum oldu.</p>
-                        <div className='news_slider_card_end'>
-                            <LiaCalendarSolid className='calendar' />
-                            <span>06.11.2018</span>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className='news_slider_card'>
-
-                    <img src={TestImg2} alt="" />
+                                    <h3 className='new_slider_card_content_header'>{data.title}</h3>
+                                    <div className="new_slider_card_content">
+                                        <h3 >{data.title}</h3>
+                                        <p>{DOMPurify.sanitize(data.content).replace(/<[^>]+>/g, '')}</p>
+                                        <div className='news_slider_card_end'>
+                                            <LiaCalendarSolid className='calendar' />
+                                            <span>{data.pub_date}</span>
+                                        </div>
+                                    </div></Link>
+                            </SwiperSlide>
 
 
-                    <h3 className='new_slider_card_content_header'> -Prestij-S Tədris Mərkəzi peşəkar və təcrübəli müəllimləri əməkdaşlığa dəvət edir!</h3>
-                    <div className="new_slider_card_content">
-                        <h3 > -Prestij-S Tədris Mərkəzi peşəkar və təcrübəli müəllimləri əməkdaşlığa dəvət edir!</h3>
-                        <p>Məntiq Olimpiadasının qalibləri məlum oldu.</p>
-                        <div className='news_slider_card_end'>
-                            <LiaCalendarSolid className='calendar' />
-                            <span>06.11.2018</span>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className='news_slider_card'>
-
-                    <img src={TestImg3} alt="" />
+                        )
+                    })
+                }
 
 
-                    <h3 className='new_slider_card_content_header'> -Prestij-S Tədris Mərkəzi peşəkar və təcrübəli müəllimləri əməkdaşlığa dəvət edir!</h3>
-                    <div className="new_slider_card_content">
-                        <h3 > -Prestij-S Tədris Mərkəzi peşəkar və təcrübəli müəllimləri əməkdaşlığa dəvət edir!</h3>
-                        <p>Məntiq Olimpiadasının qalibləri məlum oldu.</p>
-                        <div className='news_slider_card_end'>
-                            <LiaCalendarSolid className='calendar' />
-                            <span>06.11.2018</span>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className='news_slider_card'>
-
-                    <img src={TestImg4} alt="" />
-
-
-                    <h3 className='new_slider_card_content_header'> -Prestij-S Tədris Mərkəzi peşəkar və təcrübəli müəllimləri əməkdaşlığa dəvət edir!</h3>
-                    <div className="new_slider_card_content">
-                        <h3 > -Prestij-S Tədris Mərkəzi peşəkar və təcrübəli müəllimləri əməkdaşlığa dəvət edir!</h3>
-                        <p>Məntiq Olimpiadasının qalibləri məlum oldu.</p>
-                        <div className='news_slider_card_end'>
-                            <LiaCalendarSolid className='calendar' />
-                            <span>06.11.2018</span>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className='news_slider_card'>
-
-                    <img src={TestImg5} alt="" />
-
-
-                    <h3 className='new_slider_card_content_header'> -Prestij-S Tədris Mərkəzi peşəkar və təcrübəli müəllimləri əməkdaşlığa dəvət edir!</h3>
-                    <div className="new_slider_card_content">
-                        <h3 > -Prestij-S Tədris Mərkəzi peşəkar və təcrübəli müəllimləri əməkdaşlığa dəvət edir!</h3>
-                        <p>Məntiq Olimpiadasının qalibləri məlum oldu.</p>
-                        <div className='news_slider_card_end'>
-                            <LiaCalendarSolid className='calendar' />
-                            <span>06.11.2018</span>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className='news_slider_card'>
-
-                    <img src={TestImg6} alt="" />
-
-
-                    <h3 className='new_slider_card_content_header'> -Prestij-S Tədris Mərkəzi peşəkar və təcrübəli müəllimləri əməkdaşlığa dəvət edir!</h3>
-                    <div className="new_slider_card_content">
-                        <h3 > -Prestij-S Tədris Mərkəzi peşəkar və təcrübəli müəllimləri əməkdaşlığa dəvət edir!</h3>
-                        <p>Məntiq Olimpiadasının qalibləri məlum oldu.</p>
-                        <div className='news_slider_card_end'>
-                            <LiaCalendarSolid className='calendar' />
-                            <span>06.11.2018</span>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className='news_slider_card'>
-
-                    <img src={TestImg1} alt="" />
-
-
-                    <h3 className='new_slider_card_content_header'> -Prestij-S Tədris Mərkəzi peşəkar və təcrübəli müəllimləri əməkdaşlığa dəvət edir!</h3>
-                    <div className="new_slider_card_content">
-                        <h3 > -Prestij-S Tədris Mərkəzi peşəkar və təcrübəli müəllimləri əməkdaşlığa dəvət edir!</h3>
-                        <p>Məntiq Olimpiadasının qalibləri məlum oldu.</p>
-                        <div className='news_slider_card_end'>
-                            <LiaCalendarSolid className='calendar' />
-                            <span>06.11.2018</span>
-                        </div>
-                    </div>
-                </SwiperSlide>
 
 
 

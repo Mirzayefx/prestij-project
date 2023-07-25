@@ -1,48 +1,28 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import TestImg from '../images/1.jpeg'
+import { useDispatch, useSelector } from 'react-redux'
+import { getFotoGalleryList } from '../actions/MainAction'
+import OtherFotoCard from './OtherFotoCard'
 
 const OtherFotoCards = () => {
+    
+
+    const dispatch = useDispatch()
+    const fotoGalleryListArr = useSelector(state => state.Data.fotoGalleryListArr)
+    useEffect(() => {
+        dispatch(getFotoGalleryList())
+    }, [dispatch])
+
+    console.log(fotoGalleryListArr);
     return (
-        <div className='other_foto_cards cards'>
-            <div class="card">
-
-                <article>
-                    <h2>MƏNTIQ OLIMPIADASI</h2>
-
-                    <div class="pic">
-                        <img src={TestImg} />
-                    </div>
-
-                    
-                </article>
-
-            </div>
-            <div class="card">
-
-                <article>
-                    <h2>MƏNTIQ OLIMPIADASI</h2>
-
-                    <div class="pic">
-                        <img src={TestImg} />
-                    </div>
-
-                    
-                </article>
-
-            </div>
-            <div class="card">
-
-                <article>
-                    <h2>MƏNTIQ OLIMPIADASI</h2>
-
-                    <div class="pic">
-                        <img src={TestImg} />
-                    </div>
-
-                    
-                </article>
-
-            </div>
+        <div className='other_foto_cards'>
+            {
+                fotoGalleryListArr?.map((data,i)=>{
+                   return <OtherFotoCard key={i} data={data}/>
+                })
+            }
+           
+            
 
         </div>
     )

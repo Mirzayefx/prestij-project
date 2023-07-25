@@ -196,3 +196,48 @@ export default TeachersContainer
 
 
 rm -rf .git
+
+
+
+
+
+
+
+
+
+
+import React from 'react'
+import { LiaCalendarSolid } from 'react-icons/lia'
+import TestImg from '../images/headerFirstImg.jpeg'
+import TestImg1 from '../images/36.jpeg'
+import TestImg2 from '../images/39.jpeg'
+import TestImg3 from '../images/headerFirstImg.jpeg'
+import TestImg4 from '../images/firstImg.jpeg'
+import TestImg5 from '../images/firstImg2.jpeg'
+import TestImg6 from '../images/headerFiveImg.jpeg'
+import DOMPurify from 'dompurify'
+
+const OtherNewsCardsContainer = ({ newsRetrieveObj }) => {
+    return (
+        <div className='news_retrieve_cards container'>
+            <div className='news_retrieve_card'>
+                <div>
+                    <LiaCalendarSolid className='calendar' />
+                    <span>{newsRetrieveObj.pub_date}</span>
+                </div>
+                <img src={newsRetrieveObj.image} alt="" />
+
+
+
+
+
+                <p>{DOMPurify.sanitize(newsRetrieveObj.content).replace(/<[^>]+>/g, '')}</p>
+
+
+            </div>
+
+        </div>
+    )
+}
+
+export default OtherNewsCardsContainer

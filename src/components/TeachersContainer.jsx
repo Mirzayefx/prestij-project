@@ -14,64 +14,73 @@ import TeacherImg3 from '../images/5_thumb.jpeg'
 import { BsLink45Deg } from "react-icons/bs";
 import VanillaTilt from 'vanilla-tilt';
 import { FaQuoteLeft } from "react-icons/fa"
+import { useDispatch, useSelector } from 'react-redux';
+import { getTeachersList } from '../actions/MainAction';
 // import {IoIosArrowBack,IoIosArrowForward} from "react-icons/io"
 
 
 const TeachersContainer = () => {
 
 
+    const dispatch = useDispatch()
+    const teachersListArr = useSelector(state => state.Data.teachersListArr)
+    useEffect(() => {
+        dispatch(getTeachersList())
+    }, [dispatch])
 
-    const teacherData = [
-        {
-            name: 'Rasim Rəhimov',
-            subject: 'Coğrafiya',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore officiis expedita incidunt culpa laboriosam eligendi rerum iste! Similique fugiat non assumenda itaque accusamus molestiae est explicabo, harum quisquam modi animi?',
-            image: TeacherImg,
-        },
-        {
-            name: 'Rasim Rəhimov1',
-            subject: 'Coğrafiya',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore officiis expedita incidunt culpa laboriosam eligendi rerum iste! Similique fugiat non assumenda itaque accusamus molestiae est explicabo,',
-            image: TeacherImg1,
-        },
-        {
-            name: 'Rasim Rəhimov2',
-            subject: 'Coğrafiya',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore officiis expedita incidunt culpa laboriosam eligendi rerum iste! Similique fugiat non assumenda itaque accusamus molestiae est explicabo, harum quisquam modi animi?',
-            image: TeacherImg2,
-        },
-        {
-            name: 'Rasim Rəhimov3',
-            subject: 'Coğrafiya',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore officiis expedita incidunt culpa laboriosam eligendi rerum iste! Similique fugiat non assumenda itaque accusamus molestiae est explicabo, harum quisquam modi animi?',
-            image: TeacherImg3,
-        },
-        {
-            name: 'Rasim Rəhimov',
-            subject: 'Coğrafiya',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore officiis expedita incidunt culpa laboriosam eligendi rerum iste! Similique fugiat non assumenda itaque accusamus molestiae est explicabo, harum quisquam modi animi?',
-            image: TeacherImg,
-        },
-        {
-            name: 'Rasim Rəhimov1',
-            subject: 'Coğrafiya',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore officiis expedita incidunt culpa laboriosam eligendi rerum iste! Similique fugiat non assumenda itaque accusamus molestiae est explicabo, harum quisquam modi animi?',
-            image: TeacherImg1,
-        },
-        {
-            name: 'Rasim Rəhimov2',
-            subject: 'Coğrafiya',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore officiis expedita incidunt culpa laboriosam eligendi rerum iste! Similique fugiat non assumenda itaque accusamus molestiae est explicabo, harum quisquam modi animi?',
-            image: TeacherImg2,
-        },
-        {
-            name: 'Rasim Rəhimov3',
-            subject: 'Coğrafiya',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore officiis expedita incidunt culpa laboriosam eligendi rerum iste! Similique fugiat non assumenda itaque accusamus molestiae est explicabo, harum quisquam modi animi?',
-            image: TeacherImg3,
-        },
+    console.log(teachersListArr);
 
-    ];
+    // const teacherData = [
+    //     {
+    //         name: 'Rasim Rəhimov',
+    //         subject: 'Coğrafiya',
+    //         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore officiis expedita incidunt culpa laboriosam eligendi rerum iste! Similique fugiat non assumenda itaque accusamus molestiae est explicabo, harum quisquam modi animi?',
+    //         image: TeacherImg,
+    //     },
+    //     {
+    //         name: 'Rasim Rəhimov1',
+    //         subject: 'Coğrafiya',
+    //         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore officiis expedita incidunt culpa laboriosam eligendi rerum iste! Similique fugiat non assumenda itaque accusamus molestiae est explicabo,',
+    //         image: TeacherImg1,
+    //     },
+    //     {
+    //         name: 'Rasim Rəhimov2',
+    //         subject: 'Coğrafiya',
+    //         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore officiis expedita incidunt culpa laboriosam eligendi rerum iste! Similique fugiat non assumenda itaque accusamus molestiae est explicabo, harum quisquam modi animi?',
+    //         image: TeacherImg2,
+    //     },
+    //     {
+    //         name: 'Rasim Rəhimov3',
+    //         subject: 'Coğrafiya',
+    //         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore officiis expedita incidunt culpa laboriosam eligendi rerum iste! Similique fugiat non assumenda itaque accusamus molestiae est explicabo, harum quisquam modi animi?',
+    //         image: TeacherImg3,
+    //     },
+    //     {
+    //         name: 'Rasim Rəhimov',
+    //         subject: 'Coğrafiya',
+    //         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore officiis expedita incidunt culpa laboriosam eligendi rerum iste! Similique fugiat non assumenda itaque accusamus molestiae est explicabo, harum quisquam modi animi?',
+    //         image: TeacherImg,
+    //     },
+    //     {
+    //         name: 'Rasim Rəhimov1',
+    //         subject: 'Coğrafiya',
+    //         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore officiis expedita incidunt culpa laboriosam eligendi rerum iste! Similique fugiat non assumenda itaque accusamus molestiae est explicabo, harum quisquam modi animi?',
+    //         image: TeacherImg1,
+    //     },
+    //     {
+    //         name: 'Rasim Rəhimov2',
+    //         subject: 'Coğrafiya',
+    //         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore officiis expedita incidunt culpa laboriosam eligendi rerum iste! Similique fugiat non assumenda itaque accusamus molestiae est explicabo, harum quisquam modi animi?',
+    //         image: TeacherImg2,
+    //     },
+    //     {
+    //         name: 'Rasim Rəhimov3',
+    //         subject: 'Coğrafiya',
+    //         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore officiis expedita incidunt culpa laboriosam eligendi rerum iste! Similique fugiat non assumenda itaque accusamus molestiae est explicabo, harum quisquam modi animi?',
+    //         image: TeacherImg3,
+    //     },
+
+    // ];
 
 
     return (
@@ -98,7 +107,7 @@ const TeachersContainer = () => {
 
 
                 {
-                    teacherData.map((teacher, i) => {
+                    teachersListArr.map((teacher, i) => {
                         return (
                             // <SwiperSlide key={i} className='teachers_slider_card'>
                             //     <img src={teacher.image} alt="" />
@@ -110,12 +119,12 @@ const TeachersContainer = () => {
 
                                 <div className="teachers_slider_card">
                                     <img src={teacher.image} alt="" />
-                                    <h3>{teacher.name}</h3>
-                                    <p>{teacher.description}</p>
+                                    <h3>{teacher.name + ' '+ teacher.surname}</h3>
+                                    <p>{teacher.about}</p>
 
                                     <FaQuoteLeft className="quote-icon" />
                                     <div className="details">
-                                        <span>{teacher.subject}</span>
+                                        <span>cografia</span>
 
                                     </div>
                                 </div>

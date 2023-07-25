@@ -1,8 +1,23 @@
 import React from 'react'
+import DOMPurify from 'dompurify'
 
-const ServicesCard = () => {
+const ServicesCard = ({data}) => {
+
+  
   return (
-    <div>ServicesCard</div>
+    <div class="card">
+
+      <article>
+        <h2>{data.title}</h2>
+
+        <div class="pic">
+          <img src={data.image} />
+        </div>
+
+        <div class="desc">{DOMPurify.sanitize(data.content).replace(/<[^>]+>/g, '')}</div>
+      </article>
+
+    </div>
   )
 }
 
