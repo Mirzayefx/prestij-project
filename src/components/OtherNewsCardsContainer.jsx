@@ -26,7 +26,7 @@ const OtherNewsCardsContainer = () => {
             {
                 newsListArr.map((data, i) => {
                     return (
-                        <Link key={i} to={`/xeberler/${data.title}/${data.id}`}>
+                        <Link key={i} to={`/xeberler/${data.title.replace(/\s/g,'')}/${data.id}`}>
                             <div className='news_slider_card'>
 
                                 <img src={data.image} alt="" />

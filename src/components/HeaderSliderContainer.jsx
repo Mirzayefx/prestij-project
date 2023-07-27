@@ -111,7 +111,7 @@ const HeaderSliderContainer = () => {
                 swiperRef.current.swiper.slideNext();
                 
             }
-        }, 3000);
+        }, 5000);
 
         return () => clearInterval(interval);
     }, [activeIndex]);

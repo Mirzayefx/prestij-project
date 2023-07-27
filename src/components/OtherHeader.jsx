@@ -4,11 +4,11 @@ import OtherHeaderMainContainer from './OtherHeaderMainContainer'
 import OtherHeaderPagesLink from './OtherHeaderPagesLink'
 import FixedSocial from './FixedSocial'
 
-const OtherHeader = ({otherHeaderMainContent,otherHeaderPagesLink}) => {
+const OtherHeader = ({otherHeaderMainContent,otherHeaderPagesLink,otherPageBanner}) => {
   return (
     <header>
         <HeaderHead/>
-        <OtherHeaderMainContainer otherHeaderMainContent={otherHeaderMainContent}/>
+        <OtherHeaderMainContainer otherPageBanner={otherPageBanner} otherHeaderMainContent={otherHeaderMainContent}/>
         <OtherHeaderPagesLink otherHeaderPagesLink={otherHeaderPagesLink}/>
         <FixedSocial/>
       </header>

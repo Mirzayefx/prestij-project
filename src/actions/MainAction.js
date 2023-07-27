@@ -1,6 +1,6 @@
 import axios from "axios"
 import { baseUrl } from "../MAIN_API";
-import { getBannerListArr, getContactInfoListArr, getFotoGalleryListArr, getNewsListArr, getNewsRetrieveObj, getServicesListArr, getSuccessItemListArr, getSuccessListArr, getTeachersListArr, getVideoGalleryListArr } from "../redux/MainReducer";
+import { getBannerListArr, getContactInfoListArr, getFotoGalleryListArr, getNewsListArr, getNewsRetrieveObj, getServiceRetrieveObj, getServicesListArr, getSettingsListArr, getSuccessItemListArr, getSuccessListArr, getTeachersListArr, getVideoGalleryListArr } from "../redux/MainReducer";
 
 
 export const getBannerList=()=>async dispatch=>{
@@ -102,3 +102,24 @@ export const getNewsRetrieveList=(id)=>async dispatch=>{
         console.log(err);
     })
 }
+
+export const getServiceRetrieveList=(id)=>async dispatch=>{
+    return await axios.get(baseUrl+"prestij/"+ `service-retrieve/${id}/`)
+    .then(resp=>{
+        console.log(resp);
+        dispatch(getServiceRetrieveObj(resp.data))
+    }).catch(err=>{
+        console.log(err);
+    })
+}
+
+export const getSettingsList=()=>async dispatch=>{
+    return await axios.get(baseUrl+"prestij/"+ "settings-list/")
+    .then(resp=>{
+        console.log(resp);
+        dispatch(getSettingsListArr(resp.data))
+    }).catch(err=>{
+        console.log(err);
+    })
+}
+

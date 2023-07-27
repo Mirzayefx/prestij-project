@@ -8,6 +8,8 @@ export const initialState={
     teachersListArr: [],
     successListArr: [],
     successItemListArr: [],
-    newsRetrieveObj: {}
+    newsRetrieveObj: {},
+    serviceRetrieveObj: {},
+    settingsListArr: []
     // isHeaderLoading: true
 }

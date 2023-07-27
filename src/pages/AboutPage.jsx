@@ -6,10 +6,10 @@ import FooterEndBg from '../components/FooterEndBg'
 import OtherHeader from '../components/OtherHeader'
 import Footer from '../components/Footer'
 
-const AboutPage = () => {
+const AboutPage = ({otherPageBanner}) => {
   return (
     <div>
-      <OtherHeader otherHeaderMainContent="Haqqımızda" otherHeaderPagesLink="HAQQIMIZDA"/>
+      <OtherHeader otherPageBanner={otherPageBanner} otherHeaderMainContent="Haqqımızda" otherHeaderPagesLink="HAQQIMIZDA"/>
       <main>
         <section>
           <OtherAboutContainer/>

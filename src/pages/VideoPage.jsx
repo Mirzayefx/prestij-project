@@ -3,10 +3,10 @@ import OtherHeader from '../components/OtherHeader'
 import Footer from '../components/Footer'
 import OtherVideoContainer from '../components/OtherVideoContainer'
 
-const VideoPage = () => {
+const VideoPage = ({otherPageBanner}) => {
     return (
         <div>
-            <OtherHeader otherHeaderMainContent="Video" otherHeaderPagesLink="VİDEO" />
+            <OtherHeader otherPageBanner={otherPageBanner} otherHeaderMainContent="Video" otherHeaderPagesLink="VİDEO" />
             <main>
                 <section>
                     <OtherVideoContainer />

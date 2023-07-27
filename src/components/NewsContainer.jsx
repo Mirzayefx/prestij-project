@@ -75,7 +75,7 @@ const NewsContainer = () => {
                         return (
 
                             <SwiperSlide className='news_slider_card'>
-                                <Link key={i} to={`/xeberler/${data.title}/${data.id}`}>
+                                <Link key={i} to={`/xeberler/${data.title.replace(/\s/g,'')}/${data.id}`}>
                                     <img src={data.image} alt="" />
 
 

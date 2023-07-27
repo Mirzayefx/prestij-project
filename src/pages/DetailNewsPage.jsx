@@ -9,7 +9,7 @@ import { getNewsList, getNewsRetrieveList } from '../actions/MainAction'
 import OtherNewsCardsContainer from '../components/OtherNewsCardsContainer'
 import DetailNewsContainer from '../components/DetailNewsContainer'
 
-const DetailNewsPage = () => {
+const DetailNewsPage = ({otherPageBanner}) => {
     const {id}=useParams()
     const {title}=useParams()
     console.log(id);
@@ -18,12 +18,12 @@ const DetailNewsPage = () => {
     
 
     const dispatch = useDispatch()
-    const {newsListArr,newsRetrieveObj} = useSelector(state => state.Data)
-    useEffect(() => {
-        dispatch(getNewsList())
-    }, [dispatch])
+    const {newsRetrieveObj} = useSelector(state => state.Data)
+    // useEffect(() => {
+    //     dispatch(getNewsList())
+    // }, [dispatch])
 
-    console.log(newsListArr);
+    // console.log(newsListArr);
     useEffect(()=>{
         // getNewsRetrieveList
         dispatch(getNewsRetrieveList(id))
@@ -34,7 +34,7 @@ const DetailNewsPage = () => {
     
     return (
         <div>
-            <OtherHeader otherHeaderMainContent={newsRetrieveObj.title} otherHeaderPagesLink={newsRetrieveObj.title} />
+            <OtherHeader otherPageBanner={otherPageBanner} otherHeaderMainContent={newsRetrieveObj.title} otherHeaderPagesLink={newsRetrieveObj.title} />
             <main>
                 <section>
                 <DetailNewsContainer newsRetrieveObj={newsRetrieveObj}/>

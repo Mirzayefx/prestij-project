@@ -3,10 +3,10 @@ import OtherHeader from '../components/OtherHeader'
 import Footer from '../components/Footer'
 import OtherServiceContainer from '../components/OtherServiceContainer'
 
-const ServicePage = () => {
+const ServicePage = ({otherPageBanner}) => {
     return (
         <div>
-            <OtherHeader otherHeaderMainContent="Xidmətlərimiz" otherHeaderPagesLink="XİDMƏTLƏRİMİZ" />
+            <OtherHeader otherPageBanner={otherPageBanner} otherHeaderMainContent="Xidmətlərimiz" otherHeaderPagesLink="XİDMƏTLƏRİMİZ" />
             <main>
                 <section>
                     <OtherServiceContainer />

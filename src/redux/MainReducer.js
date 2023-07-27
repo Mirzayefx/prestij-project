@@ -39,7 +39,13 @@ export const MainSlice = createSlice({
         },
         getNewsRetrieveObj: (state,action)=>{
             state.newsRetrieveObj=action.payload
-        }
+        },
+        getServiceRetrieveObj: (state,action)=>{
+            state.serviceRetrieveObj=action.payload
+        },
+        getSettingsListArr: (state,action)=>{
+            state.settingsListArr=action.payload
+        },
 
     }
 });
@@ -55,4 +61,6 @@ export const {
     getTeachersListArr,
     getSuccessListArr,
     getSuccessItemListArr,
-    getNewsRetrieveObj } = MainSlice.actions;
+    getNewsRetrieveObj,
+    getServiceRetrieveObj,
+    getSettingsListArr } = MainSlice.actions;

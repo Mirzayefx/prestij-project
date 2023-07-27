@@ -3,10 +3,10 @@ import OtherHeader from '../components/OtherHeader'
 import Footer from '../components/Footer'
 import OtherFotoContainer from '../components/OtherFotoContainer'
 
-const FotoPage = () => {
+const FotoPage = ({otherPageBanner}) => {
     return (
         <div>
-            <OtherHeader otherHeaderMainContent="Foto" otherHeaderPagesLink="FOTO" />
+            <OtherHeader otherPageBanner={otherPageBanner} otherHeaderMainContent="Foto" otherHeaderPagesLink="FOTO" />
             <main>
                 <section>
                     <OtherFotoContainer />

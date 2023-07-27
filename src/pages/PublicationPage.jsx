@@ -4,10 +4,10 @@ import Footer from '../components/Footer'
 import OtherAboutContainer from '../components/OtherAboutContainer'
 import OtherPublicationContainer from '../components/OtherPublicationContainer'
 
-const PublicationPage = () => {
+const PublicationPage = ({otherPageBanner}) => {
     return (
         <div>
-            <OtherHeader otherHeaderMainContent="Nəşrlərimiz" otherHeaderPagesLink="NƏŞRLƏRİMİZ" />
+            <OtherHeader otherPageBanner={otherPageBanner} otherHeaderMainContent="Nəşrlərimiz" otherHeaderPagesLink="NƏŞRLƏRİMİZ" />
             <main>
                 <section>
                     <OtherPublicationContainer />

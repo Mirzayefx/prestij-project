@@ -3,10 +3,10 @@ import OtherHeader from '../components/OtherHeader'
 import Footer from '../components/Footer'
 import OtherCVSendContainer from '../components/OtherCVSendContainer'
 
-const CVSendPage = () => {
+const CVSendPage = ({otherPageBanner}) => {
     return (
         <div>
-            <OtherHeader otherHeaderMainContent="CV Göndər" otherHeaderPagesLink="CV GÖNDƏR" />
+            <OtherHeader otherPageBanner={otherPageBanner} otherHeaderMainContent="CV Göndər" otherHeaderPagesLink="CV GÖNDƏR" />
             <main>
                 <section>
                     <OtherCVSendContainer />

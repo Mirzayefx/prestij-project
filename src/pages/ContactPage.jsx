@@ -5,10 +5,10 @@ import OtherAboutContainer from '../components/OtherAboutContainer'
 import OtherContactContainer from '../components/OtherContactContainer'
 import OtherContactMaps from '../components/OtherContactMaps'
 
-const ContactPage = () => {
+const ContactPage = ({otherPageBanner}) => {
     return (
         <div>
-            <OtherHeader otherHeaderMainContent="Əlaqə" otherHeaderPagesLink="ƏLAQƏ" />
+            <OtherHeader otherPageBanner={otherPageBanner} otherHeaderMainContent="Əlaqə" otherHeaderPagesLink="ƏLAQƏ" />
             <main>
                 <section className='contact_section'>
                     {/* <div className="other_bg_shadow"> */}

@@ -94,9 +94,10 @@ const TeachersContainer = () => {
                 </div>
             </div>
             <Swiper
-                slidesPerView={1}
+                slidesPerView={4}
                 grabCursor={true}
                 loop={true}
+                spaceBetween={20}
                 pagination={{ clickable: true }}
                 navigation={{ nextEl: '.teachers_next_btn', prevEl: '.teachers_prev_btn' }}
                 modules={[Keyboard, Navigation, Controller, EffectCube]}
@@ -120,7 +121,7 @@ const TeachersContainer = () => {
                                 <div className="teachers_slider_card">
                                     <img src={teacher.image} alt="" />
                                     <h3>{teacher.name + ' '+ teacher.surname}</h3>
-                                    <p>{teacher.about}</p>
+                                    {/* <p>{teacher.about}</p> */}
 
                                     <FaQuoteLeft className="quote-icon" />
                                     <div className="details">

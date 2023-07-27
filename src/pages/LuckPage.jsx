@@ -10,10 +10,10 @@ import OtherHeader from '../components/OtherHeader'
 import Footer from '../components/Footer'
 import OtherLuckContainer from '../components/OtherLuckContainer'
 
-const LuckPage = () => {
+const LuckPage = ({otherPageBanner}) => {
     return (
         <div>
-            <OtherHeader otherHeaderMainContent="Uğurlarımız" otherHeaderPagesLink="UĞURLARIMIZ"/>
+            <OtherHeader otherPageBanner={otherPageBanner} otherHeaderMainContent="Uğurlarımız" otherHeaderPagesLink="UĞURLARIMIZ"/>
             <main>
                 <section>
                     <OtherLuckContainer />
