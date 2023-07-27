@@ -192,8 +192,28 @@ textarea{
 
 .header_second_container_bg {
     padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 9999;
+    /* background-color: red !important; */
 }
-
+.header_second_container_bg.bg{
+    background-color: var(--purple);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    animation: navbarAnime 0.5s ease-in-out;
+}
+@keyframes navbarAnime{
+    0%{
+        top: -100vh;
+    }
+    100%{
+        top: 0;
+    }
+}
 .header_second_card_icon {
     font-size: 3rem;
 }
@@ -1143,10 +1163,14 @@ nav {
 
 .footer_second_container {
     display: flex;
-    /* gap: 20px; */
-    justify-content: space-between;
+    gap: 20px;
+    /* justify-content: space-between; */
 }
-
+.footer_second_cards{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
 .footer_second_card {
     max-width: 270px;
 }
@@ -2073,3 +2097,16 @@ nav {
     width: 100%;
     padding: 20px;
 }
+
+.contact_create_modal{
+    max-width: 600px;
+}
+
+.swal2-popup {
+    font-size: 1.6rem;
+    
+    font-family: 'Mulish', sans-serif;
+  }
+  .swal2-title{
+    font-weight: 600;
+  }

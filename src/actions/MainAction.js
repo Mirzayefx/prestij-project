@@ -1,6 +1,6 @@
 import axios from "axios"
 import { baseUrl } from "../MAIN_API";
-import { getBannerListArr, getContactInfoListArr, getFotoGalleryListArr, getNewsListArr, getNewsRetrieveObj, getServiceRetrieveObj, getServicesListArr, getSettingsListArr, getSuccessItemListArr, getSuccessListArr, getTeachersListArr, getVideoGalleryListArr } from "../redux/MainReducer";
+import { getBannerListArr, getBranchListArr, getContactInfoListArr, getFotoGalleryListArr, getNewsListArr, getNewsRetrieveObj, getServiceRetrieveObj, getServicesListArr, getSettingsListArr, getSuccessItemListArr, getSuccessListArr, getTeachersListArr, getVideoGalleryListArr } from "../redux/MainReducer";
 
 
 export const getBannerList=()=>async dispatch=>{
@@ -118,6 +118,17 @@ export const getSettingsList=()=>async dispatch=>{
     .then(resp=>{
         console.log(resp);
         dispatch(getSettingsListArr(resp.data))
+    }).catch(err=>{
+        console.log(err);
+    })
+}
+
+
+export const getBranchList=()=>async dispatch=>{
+    return await axios.get(baseUrl+"prestij/"+ "branch-list/")
+    .then(resp=>{
+        console.log(resp);
+        dispatch(getBranchListArr(resp.data))
     }).catch(err=>{
         console.log(err);
     })

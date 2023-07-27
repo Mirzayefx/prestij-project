@@ -10,6 +10,12 @@ export const initialState={
     successItemListArr: [],
     newsRetrieveObj: {},
     serviceRetrieveObj: {},
-    settingsListArr: []
+    settingsListArr: [],
+    branchListArr: [],
+    contactNameValue: "",
+    contactEmailValue: "",
+    contactSubjectValue: "",
+    contactMessageValue: "",
+   
     // isHeaderLoading: true
 }
