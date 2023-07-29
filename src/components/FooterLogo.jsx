@@ -6,7 +6,7 @@ import FooterLogoImg from '../images/logo_footer.png'
 const FooterLogo = () => {
   return (
     <Link to=''>
-        <img src={FooterLogoImg} alt="" />
+        <img className='footer_logo' src={FooterLogoImg} alt="" />
     </Link>
   )
 }

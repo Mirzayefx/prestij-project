@@ -98,10 +98,28 @@ const TeachersContainer = () => {
                 grabCursor={true}
                 loop={true}
                 spaceBetween={20}
+                breakpoints={{
+                    200: {
+                        slidesPerView: 1,
+                      //   spaceBetween: 20,
+                      },
+                    576: {
+                      slidesPerView: 2,
+                    //   spaceBetween: 20,
+                    },
+                    768: {
+                      slidesPerView: 3,
+                    //   spaceBetween: 40,
+                    },
+                    992: {
+                      slidesPerView: 4,
+                    //   spaceBetween: 50,
+                    },
+                  }}
                 pagination={{ clickable: true }}
                 navigation={{ nextEl: '.teachers_next_btn', prevEl: '.teachers_prev_btn' }}
                 modules={[Keyboard, Navigation, Controller, EffectCube]}
-                className="mySwiper teachers_slider_card_container"
+                className="mySwiper teachers_slider_card_container container"
 
             >
 

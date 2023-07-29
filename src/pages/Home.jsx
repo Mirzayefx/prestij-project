@@ -61,7 +61,7 @@ const Home = () => {
           <NewLetter/>
         </section>
       </main>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   )
 }

@@ -1128,22 +1128,21 @@ nav {
     padding: 50px;
     /* margin: 10px; */
     border-radius: 8px;
-
+    min-width: 600px;
     position: relative;
     /* width: 300px; */
     /* height: 300px; */
-    color: #fff;
     /* background: transparent; */
     overflow: hidden;
     border-top: 1px solid rgba(136, 0, 255, 0.908);
     border-right: 1px solid rgba(76, 0, 255, 0.5);
     border-bottom: 1px solid rgba(145, 20, 255, 0.5);
     border-left: 1px solid rgba(177, 113, 255, 0.5);
-    font-family: sans-serif;
+    /* font-family: sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: center; */
     /* padding: 1em; */
 
 }
@@ -1211,6 +1210,7 @@ nav {
 .footer_header p {
     color: var(--white);
     margin-top: 15px;
+    font-size: 1.8rem;
 }
 
 .footer_read_more button {
@@ -1218,7 +1218,7 @@ nav {
 }
 
 .footer_read_more button:before {
-    background-color: var(--black3);
+    background-color: var(--yellow);
 
 }
 
@@ -1256,9 +1256,11 @@ nav {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    
 }
 .footer_second_card {
     max-width: 270px;
+    
 }
 
 .footer_second {
@@ -1317,6 +1319,7 @@ nav {
 
 .footer_end_link li a {
     color: var(--white);
+    font-size: 1.6rem;
     transition: all 0.2s ease-in-out;
 }
 
@@ -1344,6 +1347,10 @@ nav {
     align-items: center;
     /* position: relative; */
 }
+
+.footer_logo{
+    width: 150px;
+} 
 
 
 
@@ -1441,7 +1448,7 @@ nav {
     row-gap: 30px;
     /* height: 100%; */
     /* width: 100%; */
-    min-width: 277px;
+    /* min-width: 277px; */
     /* background-color: red; */
 }
 
@@ -1671,19 +1678,6 @@ nav {
 
 
 .bg_new_letter {
-    /* background: url('../images/bg-newletter.webp');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 400px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    background-position: top;
-    margin-top: 60px;
-    margin-bottom: 60px; */
-
-
-
 
     background: url('../images/bg-newletter.webp') no-repeat top right;
     max-width: 753px;
@@ -1700,6 +1694,7 @@ nav {
     max-width: 490px;
     margin: 20px auto 40px;
     line-height: 30px;
+    font-size: 1.8rem;
 }
 
 .bg_new_letter input {
