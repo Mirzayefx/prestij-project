@@ -114,6 +114,9 @@
     .header_second_card {
         min-width: 280px;
     }
+    .header_search_container{
+      
+    }
     
    
    
@@ -135,10 +138,14 @@
 
 @media screen and (max-width: 768px){
     .header_first_list li a{
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
     .header_first_list_icon{
-        font-size: 1.4rem;
+        font-size: 1.5rem;
+    }
+    .header_second_list_search_icon{
+        width: 16px;
+        height: 16px;
     }
     .header_middle_container_content h1{
         font-size: 3rem;
@@ -151,10 +158,47 @@
     }
     .main_second_cards_container{
         display: flex;
+        
+    }
+    .main_second_cards_container .header_second_card:nth-child(1){
+        background-color: var(--blue);
+    }
+    .main_second_cards_container .header_second_card:nth-child(2){
+        background-color: var(--yellow);
+    }
+    .main_second_cards_container .header_second_card:nth-child(3){
+        background-color: var(--serviceIconBg);
+    }
+    .main_first_cards{
+        /* background-color: var(--yellow); */
+        display: block;
     }
 }
 
 @media screen and (max-width: 550px){
+    
+    
+}
+
+
+
+@media screen and (max-width: 550px){
+    .header_first_list{
+        gap: 15px;
+    }
+    .header_second_list{
+        gap: 10px;
+    }
+    .header_first_list li a{
+        font-size: 1.1rem;
+    }
+    .header_first_list_icon{
+        font-size: 1.3rem;
+    }
+    .header_second_list_search_icon{
+        width: 14px;
+        height: 14px;
+    }
     .header_middle_container_content h1{
         font-size: 2.4rem;
     }
@@ -168,19 +212,31 @@
     .header_middle_container_content h1{
         font-size: 2.2rem;
     }
-}
-
-@media screen and (max-width: 450px){
     .header_first_list{
-        gap: 15px;
+        gap: 13px;
     }
     .header_second_list{
-        gap: 10px;
+        gap: 8px;
     }
     .header_first_list li a{
         font-size: 1rem;
     }
     .header_first_list_icon{
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+    }
+    .header_second_list_search_icon{
+        width: 12px;
+        height: 12px;
+    }
+    .fixed_search{
+        max-width: 300px;
+        
+     }
+     .fixed_search input{
+        font-size: 2.2rem;
+    }
+    .fixed_search_close_icon{
+        color: var(--white);
+        font-size: 3.2rem;
     }
 }

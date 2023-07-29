@@ -6,27 +6,27 @@ import { CgClose } from "react-icons/cg"
 import { GoTriangleDown } from "react-icons/go"
 
 const Nav = () => {
-    useEffect(()=>{
-        let angleIcon=document.querySelectorAll('.angle_icon')
-        let navInnerListUl=document.querySelectorAll('.nav_inner_list>ul')
+    useEffect(() => {
+        let angleIcon = document.querySelectorAll('.angle_icon')
+        let navInnerListUl = document.querySelectorAll('.nav_inner_list>ul')
         console.log(navInnerListUl);
-        for(let i=0;i<angleIcon.length;i++){
-            angleIcon[i].addEventListener('click',()=>{
+        for (let i = 0; i < angleIcon.length; i++) {
+            angleIcon[i].addEventListener('click', () => {
                 navInnerListUl[i].classList.toggle('active_inner_list')
             })
         }
 
-        let barsIcon=document.querySelector('.bars_icon')
-        let closeIcon=document.querySelector('.close_icon')
-        let navList=document.querySelector('.nav_list')
-        barsIcon.addEventListener('click',()=>{
+        let barsIcon = document.querySelector('.bars_icon')
+        let closeIcon = document.querySelector('.close_icon')
+        let navList = document.querySelector('.nav_list')
+        barsIcon.addEventListener('click', () => {
             navList.classList.add('nav_active')
         })
-        closeIcon.addEventListener('click',()=>{
+        closeIcon.addEventListener('click', () => {
             navList.classList.remove('nav_active')
         })
-       
-    },[])
+
+    }, [])
     return (
         <nav>
             <ul className="nav_list">
@@ -41,7 +41,11 @@ const Nav = () => {
                     <Link to='/ugurlarimiz'>Uğurlarımız</Link>
                 </li>
                 <li className='nav_inner_list'>
-                    <Link className='angle_link' to='/xidmetlerimiz'>XİDMƏTLƏRİMİZ <GoTriangleDown className='angle_icon'/></Link>
+                    <div className='angle_link'>
+                        <Link to='/xidmetlerimiz'>XİDMƏTLƏRİMİZ</Link>
+                        <GoTriangleDown className='angle_icon' />
+                    </div>
+
                     <ul>
                         <li>
                             <Link to=''>ABİTURİYENT HAZIRLIĞI</Link>
@@ -82,7 +86,11 @@ const Nav = () => {
                     <Link to='/xeberler'>Xəbərlər</Link>
                 </li>
                 <li className='nav_inner_list galarey_list'>
-                    <Link className='angle_link' to='/foto'>Qalareya <GoTriangleDown className='angle_icon'/></Link>
+                    <div className='angle_link'>
+                        <Link to='/foto'>Qalareya</Link>
+                        <GoTriangleDown className='angle_icon' />
+                    </div>
+
                     <ul>
                         <li>
                             <Link to='/foto'>FOTO</Link>
@@ -110,7 +118,7 @@ const Nav = () => {
 
             </ul>
             <FaBars className="bars_icon" />
-            <button className='nav_search_btn'>
+            {/* <button className='nav_search_btn'>
                 <AiOutlineSearch className='search_icon search_one_icon' />
                 <div className="header_search_container">
                     <input placeholder='Axtarış sözünü bura daxil edin' type="text" />
@@ -119,7 +127,7 @@ const Nav = () => {
                     </button>
 
                 </div>
-            </button>
+            </button> */}
 
         </nav>
     )

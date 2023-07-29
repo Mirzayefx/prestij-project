@@ -11,7 +11,7 @@ const HeaderMainContainer = () => {
       const headerMainContainer = document.querySelector('.header_main_container');
 
       if (navbar) {
-        if (window.scrollY > 500) {
+        if (window.scrollY > 50) {
           navbar.classList.add('bg');
           headerMainContainer.style.justifyContent='flex-end'
         } else {

@@ -54,6 +54,24 @@ const NewsContainer = () => {
                 autoplay={{
                     delay: 3000
                 }}
+                breakpoints={{
+                    200: {
+                        slidesPerView: 1,
+                      //   spaceBetween: 20,
+                      },
+                    576: {
+                      slidesPerView: 2,
+                    //   spaceBetween: 20,
+                    },
+                    768: {
+                      slidesPerView: 3,
+                    //   spaceBetween: 40,
+                    },
+                    1180: {
+                      slidesPerView: 4,
+                    //   spaceBetween: 50,
+                    },
+                  }}
 
                 // pagination={{
                 //     clickable: false,
@@ -71,7 +89,7 @@ const NewsContainer = () => {
 
 
                 {
-                    newsListArr.map((data, i) => {
+                    newsListArr?.map((data, i) => {
                         return (
 
                             <SwiperSlide className='news_slider_card'>
@@ -82,7 +100,7 @@ const NewsContainer = () => {
                                     <h3 className='new_slider_card_content_header'>{data.title}</h3>
                                     <div className="new_slider_card_content">
                                         <h3 >{data.title}</h3>
-                                        <p>{DOMPurify.sanitize(data.content).replace(/<[^>]+>/g, '')}</p>
+                                        <p>{DOMPurify.sanitize(data.content).replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ')}</p>
                                         <div className='news_slider_card_end'>
                                             <LiaCalendarSolid className='calendar' />
                                             <span>{data.pub_date}</span>
