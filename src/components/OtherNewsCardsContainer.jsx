@@ -24,7 +24,7 @@ const OtherNewsCardsContainer = () => {
     return (
         <div className='other_news_cards_container container'>
             {
-                newsListArr.map((data, i) => {
+                newsListArr?.map((data, i) => {
                     return (
                         <Link key={i} to={`/xeberler/${data.title.replace(/\s/g,'')}/${data.id}`}>
                             <div className='news_slider_card'>

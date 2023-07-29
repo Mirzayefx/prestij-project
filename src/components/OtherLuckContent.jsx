@@ -15,12 +15,12 @@ const OtherLuckContent = () => {
     return (
         <div className='other_about_content'>
             {
-                successListArr.map((data,i)=>{
+                successListArr?.map((data,i)=>{
                     return <h5 key={i}>{data.title}</h5>
                 })
             }
             {
-                successItemListArr.map((data,i)=>{
+                successItemListArr?.map((data,i)=>{
                     return <p key={i}>{data.item}</p>
                 })
             }

@@ -659,6 +659,9 @@ nav {
 .section_header_link {
     text-align: center;
     display: block;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 6px;
     margin-bottom: 6px;
     font-style: italic;
@@ -666,6 +669,7 @@ nav {
     transition: all .5s ease-in-out;
     position: relative;
     margin-bottom: 80px;
+    font-size: 1.6rem;
 
 }
 
@@ -1946,6 +1950,16 @@ nav {
 .other_service_content{
     max-width: 700px;
 }
+.other_service_content .services_container{
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(277px, 1fr));
+    gap: 20px;
+}
+.other_service_content .services_card {
+    min-width: 277px;
+   
+}
 
 .other_news_cards_container{
     display: grid;
@@ -1967,11 +1981,11 @@ nav {
 
 .other_video_cards{
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(570px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
     gap: 30px;
 }
 .other_video_card{
-    min-width: 570px;
+    min-width: 300px;
 }
 .other_video_card iframe{
     width: 100%;
