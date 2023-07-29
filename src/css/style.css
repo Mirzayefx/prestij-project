@@ -147,7 +147,13 @@ textarea{
     margin-bottom: 40px;
     z-index: 99;
 }
-
+.main_second_cards_container{
+    display: none;
+    gap: 20px;
+    flex-direction: column;
+    max-width: 500px;
+    margin-top: 50px;
+}
 .header_second_card {
     box-shadow: 0 0 9px rgba(69, 69, 69, 0.23);
     border-radius: 6px;
@@ -290,9 +296,7 @@ textarea{
     font-size: 1.5rem;
 }
 
-.nav_list li:last-child {
-    padding: 15px 10px;
-}
+
 
 .nav_list li {
     padding: 15px 0px;
@@ -302,7 +306,26 @@ textarea{
 
 
 }
-
+.bars_icon{
+    margin-right: 15px;
+    color: var(--white);
+    font-size: 2.2rem;
+    display: none;
+}
+.close_parent{
+    display: none;
+    /* background-color: red; */
+    text-align: end;
+    padding: 20px 20px 5px 0;
+}
+.close_icon{
+    color: var(--black);
+    font-size: 2.5rem;
+    
+}
+.angle_icon{
+    display: none;
+}
 .nav_inner_list {
     position: relative;
 
@@ -347,8 +370,9 @@ textarea{
 
 .search_icon {
     color: var(--white);
-    font-size: 2rem;
+    font-size: 2.4rem;
     cursor: pointer;
+    
 }
 
 .header_search_container {
@@ -410,6 +434,7 @@ nav {
     background: none;
     border: none;
     outline: none;
+    margin-left: 10px;
     padding-top: 6px;
     padding-bottom: 3px;
 }

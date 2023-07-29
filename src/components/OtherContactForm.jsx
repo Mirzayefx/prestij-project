@@ -25,8 +25,8 @@ const OtherContactForm = () => {
             if (resp.status === 201) {
 
                 Swal.fire({
-                    title: "Create",
-                    text: "Mesaj göndərildi",
+                    title: "Təbriklər!",
+                    text: "CV məlumatları uğurla göndərildi",
                     icon: "success",
                     confirmButtonText: "OK",
                     // width: "400px"
@@ -44,7 +44,7 @@ const OtherContactForm = () => {
 
             }).then(function () {
 
-                window.location.href = "/elaqe";
+                window.location.href = "/cv-gonder";
             })
         })
     }

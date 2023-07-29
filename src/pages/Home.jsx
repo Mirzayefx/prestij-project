@@ -16,6 +16,7 @@ import FooterEndBg from '../components/FooterEndBg'
 import NewLetter from '../components/NewLetter'
 import HeaderMainContainer from '../components/HeaderMainContainer'
 import Footer from '../components/Footer'
+import MainFirstCards from '../components/MainFirstCards'
 
 const Home = () => {
   return (
@@ -28,7 +29,7 @@ const Home = () => {
         <HeaderMainContainer/>
       </header>
       <main>
-        
+        <MainFirstCards/>
         <section>
           <SectionHeader sectionHeader="Xəbərlər" sectionLink="Kursumuz haqqında ən son yenilikləri xəbərlər bölməsindən izləyin!"/>
           <News />

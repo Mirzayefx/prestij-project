@@ -30,11 +30,11 @@ const HeaderHead = () => {
                     contactInfoArr.map((data, i) => { */}
                         <ul className='header_first_list'>
                             <li>
-                                <GoMail />
+                                <GoMail className='header_first_list_icon'/>
                                 <Link to={contactInfoArr.length && contactInfoArr[0]?.email}>{contactInfoArr[0]?.email}</Link>
                             </li>
                             <li>
-                                <ImMobile />
+                                <ImMobile className='header_first_list_icon'/>
                                 <Link to={contactInfoArr.length && contactInfoArr[0]?.contact_number}>{contactInfoArr[0]?.contact_number}</Link>
                             </li>
                             {/* <li>
@@ -47,16 +47,16 @@ const HeaderHead = () => {
 
                 <ul className='header_second_list'>
                     <li>
-                        <Link to={''}><BsFacebook /></Link>
+                        <Link to={''}><BsFacebook className='header_first_list_icon'/></Link>
                     </li>
                     <li>
-                        <Link to={''}><BsInstagram /></Link>
+                        <Link to={''}><BsInstagram className='header_first_list_icon'/></Link>
                     </li>
                     <li>
-                        <Link to={''}><FaLinkedinIn /></Link>
+                        <Link to={''}><FaLinkedinIn className='header_first_list_icon'/></Link>
                     </li>
                     <li>
-                        <Link to={''}><BsYoutube /></Link>
+                        <Link to={''}><BsYoutube className='header_first_list_icon'/></Link>
                     </li>
                 </ul>
             </div>
