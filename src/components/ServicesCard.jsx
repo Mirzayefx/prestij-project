@@ -16,7 +16,7 @@ const ServicesCard = ({ data }) => {
             <img src={data.image} />
           </div>
 
-          <div class="desc">{DOMPurify.sanitize(data.content).replace(/<[^>]+>/g, '')}</div>
+          <div class="desc">{DOMPurify.sanitize(data.content).replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ')}</div>
         </article>
 
       </div>

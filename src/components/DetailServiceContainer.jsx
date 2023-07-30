@@ -11,7 +11,7 @@ const DetailServiceContainer = ({serviceRetrieveObj}) => {
 
 
 
-                <p>{DOMPurify.sanitize(serviceRetrieveObj.content).replace(/<[^>]+>/g, '')}</p>
+                <p>{DOMPurify.sanitize(serviceRetrieveObj.content).replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ')}</p>
             </div>
         </div>
     )

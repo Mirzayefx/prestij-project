@@ -104,13 +104,21 @@ const HeaderSliderContainer = () => {
 
 
     useEffect(() => {
+        // let spanEl=document.querySelectorAll('.haeder_one span')
+        let h1El=document.querySelectorAll('.haeder_one')
+
+        // console.log(spanEl);
        
+        
         const interval = setInterval(() => {
             if (swiperRef.current && swiperRef.current.swiper) {
                 setActiveIndex((prevIndex) => (prevIndex + 1) % bannerListArr?.length);
                 swiperRef.current.swiper.slideNext();
                 
             }
+
+            
+            
         }, 5000);
 
         return () => clearInterval(interval);

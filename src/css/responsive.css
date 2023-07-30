@@ -600,10 +600,17 @@
 @media screen and (max-width: 620px) {
     .footer_end_container {
         flex-direction: column;
+        
     }
 
     .footer_end_link li a {
         font-size: 1.4rem;
     }
+    .footer_end_link{
+        
+
+    }
+
+    
 
 }
