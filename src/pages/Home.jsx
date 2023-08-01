@@ -17,10 +17,14 @@ import NewLetter from '../components/NewLetter'
 import HeaderMainContainer from '../components/HeaderMainContainer'
 import Footer from '../components/Footer'
 import MainFirstCards from '../components/MainFirstCards'
+import { Helmet } from 'react-helmet'
 
 const Home = () => {
   return (
     <div>
+      <Helmet>
+        <title>Əsas səhifə</title>
+      </Helmet>
       <header className='home_header'>
         <HeaderHead />
         {/* <HeaderSecond /> */}

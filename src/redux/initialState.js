@@ -66,7 +66,6 @@ export const initialState={
     relatedTo: "",
     relatedToSecond: "",
     recommendMobileNumber: "",
-    recommendMobileNumberSecond: ""
-
-    // isHeaderLoading: true
+    recommendMobileNumberSecond: "",
+    isHeaderLoading: false
 }

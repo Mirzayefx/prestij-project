@@ -4,10 +4,14 @@ import Footer from '../components/Footer'
 import OtherAboutContainer from '../components/OtherAboutContainer'
 import OtherContactContainer from '../components/OtherContactContainer'
 import OtherContactMaps from '../components/OtherContactMaps'
+import { Helmet } from 'react-helmet'
 
 const ContactPage = ({otherPageBanner}) => {
     return (
         <div>
+            <Helmet>
+                <title>Əlaqə</title>
+            </Helmet>
             <OtherHeader otherPageBanner={otherPageBanner} otherHeaderMainContent="Əlaqə" otherHeaderPagesLink="ƏLAQƏ" />
             <main>
                 <section className='contact_section'>

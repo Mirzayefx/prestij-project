@@ -3,10 +3,14 @@ import Footer from '../components/Footer'
 import OtherHeader from '../components/OtherHeader'
 import OtherLuckContainer from '../components/OtherLuckContainer'
 import OtherNewsContainer from '../components/OtherNewsContainer'
+import { Helmet } from 'react-helmet'
 
 const NewsPage = ({otherPageBanner}) => {
     return (
         <div>
+            <Helmet>
+                <title>Xəbərlər</title>
+            </Helmet>
             <OtherHeader otherPageBanner={otherPageBanner} otherHeaderMainContent="Xəbərlər" otherHeaderPagesLink="XƏBƏRLƏR" />
             <main>
                 <section>

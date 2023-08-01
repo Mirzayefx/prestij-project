@@ -303,7 +303,7 @@ const HeaderSliderContainer = () => {
 
 
 
-            </Swiper>: ''
+            </Swiper>: null
             }
            
         </div>

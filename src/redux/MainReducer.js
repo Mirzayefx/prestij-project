@@ -7,7 +7,7 @@ export const MainSlice = createSlice({
     initialState: initialState,
     reducers: {
         getBannerListArr: (state, action) => {
-
+            state.isHeaderLoading = true
             state.bannerListArr = action.payload
 
 
@@ -61,7 +61,7 @@ export const MainSlice = createSlice({
         contactMessageChange: (state, action) => {
             state.contactMessageValue = action.payload
         },
-        
+
         vacancyNameChange: (state, action) => {
             state.vacancyName = action.payload
         },
@@ -215,6 +215,9 @@ export const MainSlice = createSlice({
         relatedToSecondChange: (state, action) => {
             state.relatedToSecond = action.payload
         },
+        headerLoading: (state) => {
+            state.isHeaderLoading = true
+        },
     }
 });
 
@@ -287,5 +290,6 @@ export const {
     recommendMobileNumberChange,
     recommendMobileNumberSecondChange,
     relatedToChange,
-    relatedToSecondChange
+    relatedToSecondChange,
+    headerLoading
 } = MainSlice.actions;
